@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>申博面试题库 - 政治版</title>
+    <style>
+        body {
+            background-color: #f5f7fa;
+            font-family: "Microsoft YaHei", SimSun, serif;
+            margin: 0;
+            padding: 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #1a365d;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, #4a90e2, #1a365d);
+        }
+
+        .category {
+            font-size: 24px;
+            margin: 40px 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            color: #2d3748;
+            font-weight: bold;
+        }
+
+        .question-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 25px;
+        }
+
+        .question-box {
+            flex: 1;
+            border: none;
+            padding: 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #f8fafc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .question-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #2d3748;
+            line-height: 1.5;
+        }
+
+        .answer {
+            display: none;
+            padding: 15px;
+            margin-top: 15px;
+            background-color: white;
+            border-radius: 8px;
+            border-left: 4px solid #4a90e2;
+            color: #4a5568;
+        }
+
+        .random-question-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .random-question-box {
+            flex: 1;
+            border: none;
+            padding: 25px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background-color: #edf2f7;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .random-question-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .refresh-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #4a90e2, #1a365d);
+            color: white;
+        }
+
+        .refresh-button:hover {
+            transform: rotate(180deg) scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .refresh-icon {
+            font-size: 28px;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">申博 - 政治版（电脑版）-点击题目显示答案</h1>
+        
+        <div class="category">政治理论</div>
+        <div class="question-row">
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您如何理解习近平新时代中国特色社会主义思想的核心要义？</div>
+                <div class="answer">
+                    习近平新时代中国特色社会主义思想以"八个明确"和"十四个坚持"为主要内容，核心要义是坚持和发展中国特色社会主义。它强调以人民为中心的发展思想，统筹推进"五位一体"总体布局，协调推进"四个全面"战略布局，为实现中华民族伟大复兴提供了行动指南。<br>
+                </div>
+            </div>
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">作为一名博士生，您认为应该如何将专业学习与服务国家战略需求相结合？</div>
+                <div class="answer">
+                    作为控制科学与工程专业的博士生，我将紧密关注国家在智能制造、航空航天等重点领域的发展需求。我会将研究方向与国家重大工程项目和"卡脖子"技术攻关相结合，努力在基础研究和应用创新上做出贡献，助力国家科技自立自强。<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-row">
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您如何看待科研诚信问题？</div>
+                <div class="answer">
+                    科研诚信是科研工作的基石。我将严格遵守学术规范，恪守科研道德，反对抄袭剽窃、弄虚作假等学术不端行为。在研究过程中，我会实事求是，客观记录和报告研究数据，尊重他人的研究成果。<br>
+                </div>
+            </div>
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您对西北工业大学的校训"公诚勇毅"有什么理解？</div>
+                <div class="answer">
+                    西北工业大学"公诚勇毅"的校训体现了学校的精神内核。"公"代表公正正直，"诚"体现诚实守信，"勇"展现开拓进取，"毅"表达坚韧不拔。作为西工人大人，我将以此为准则，培养高尚的品格，追求卓越的学术。<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-row">
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">在科研工作中遇到困难时，您会如何应对？</div>
+                <div class="answer">
+                    面对科研困难，我会保持积极乐观的心态，通过查阅文献、与导师和同学讨论、尝试多种解决方案等方式来克服困难。同时，我相信困难是成长的机会，会以坚韧的意志坚持攻关，直到找到解决方案。<br>
+                </div>
+            </div>
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您如何处理学习、科研与社会工作的关系？</div>
+                <div class="answer">
+                    我会以科研学习为重心，合理规划时间。同时积极参与学术讨论、学生工作等活动，培养组织能力和团队协作精神。通过多方面的锻炼，实现全面发展，成为德智体美劳全面发展的人才。<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-row">
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您对导师的指导工作有什么期待？</div>
+                <div class="answer">
+                    我希望能在导师的指导下，系统地学习专业知识，掌握科研方法，培养独立思考和创新能力。我会虚心接受导师的建议，主动汇报研究进展，与导师保持良好的沟通。同时，我也会学习导师的治学态度和为人处世之道。<br>
+                </div>
+            </div>
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您如何看待科技创新与国家安全的关系？</div>
+                <div class="answer">
+                    科技创新是国家安全的重要支撑。作为控制科学与工程领域的研究者，我深知该领域对国防建设和国家安全的重要性。我将严格遵守保密规定，增强安全意识，为维护国家安全贡献力量。<br>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-row">
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您如何理解科研工作者的社会责任？</div>
+                <div class="answer">
+                    科研工作者应当胸怀"国之大者"，将个人发展与国家需求相结合。我们要坚持科技向善，注重研究成果的社会效益，主动承担社会责任。同时要积极传播科学知识，为科技进步和社会发展贡献力量。<br>
+                </div>
+            </div>
+            <div class="question-box" onclick="toggleAnswer(this)">
+                <div class="question">您对未来的职业规划是什么？</div>
+                <div class="answer">
+                    我希望通过博士阶段的学习，在控制科学与工程领域打下扎实的理论基础，培养独立科研能力。毕业后，我计划继续从事科研工作，在高校或科研院所工作，为国家科技发展和人才培养做出贡献。<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 添加随机题目区域 -->
+
+    <div class="container">
+        <div class="category">随机题目</div>
+        <div class="random-question-container">
+            <div class="random-question-box" onclick="toggleRandomAnswer(this)">
+                <div class="question" id="random-question"></div>
+                <div class="answer" id="random-answer"></div>
+            </div>
+            <div class="refresh-button" onclick="updateRandomQuestion()">
+                <i class="refresh-icon">↻</i>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .random-question-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .random-question-box {
+            flex: 1;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .random-question-box:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .refresh-button {
+            width: 40px;
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .refresh-button:hover {
+            background-color: #f8f9fa;
+            transform: rotate(180deg);
+        }
+
+        .refresh-icon {
+            font-size: 24px;
+            font-style: normal;
+        }
+    </style>
+
+    <script>
+        function toggleAnswer(element) {
+            const answer = element.querySelector('.answer');
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+
+        // 政治题库
+        const questions = [
+            {
+                question: "如何理解中国共产党的初心和使命？",
+                answer: "中国共产党的初心和使命是为中国人民谋幸福，为中华民族谋复兴。这是中国共产党人的初心和使命，是激励一代代中国共产党人前赴后继、英勇奋斗的根本动力。"
+            },
+            {
+                question: "如何理解'四个自信'？",
+                answer: "'四个自信'是指中国特色社会主义道路自信、理论自信、制度自信、文化自信。这是一个有机整体，道路自信是前提，理论自信是指导，制度自信是保障，文化自信是基础。"
+            },
+            {
+                question: "如何理解'两个确立'的决定性意义？",
+                answer: "'两个确立'指确立习近平同志党中央的核心、全党的核心地位，确立习近平新时代中国特色社会主义思想的指导地位。这是党的十八大以来最重要的政治成果，对新时代党和国家的事业发展、对推进中华民族伟大复兴历史进程具有决定性意义。"
+            },
+            {
+                question: "如何理解'双循环'新发展格局？",
+                answer: "'双循环'新发展格局是以国内大循环为主体、国内国际双循环相互促进的新发展格局。这是根据我国发展阶段、环境、条件变化作出的战略选择，是事关我国发展全局的系统性深层次变革。"
+            },
+            // 新增的5个题目
+            {
+                question: "如何理解'中国式现代化'？",
+                answer: "中国式现代化是中国共产党领导的社会主义现代化，具有五个重要特征：人口规模巨大的现代化、全体人民共同富裕的现代化、物质文明和精神文明相协调的现代化、人与自然和谐共生的现代化、走和平发展道路的现代化。这是一条前无古人的新路，体现了中国特色社会主义的本质要求。"
+            },
+            {
+                question: "如何理解'全过程人民民主'？",
+                answer: "全过程人民民主是社会主义民主政治的本质属性，体现了中国特色社会主义民主的特点和优势。它包括选举民主和协商民主，覆盖了民主选举、民主协商、民主决策、民主管理、民主监督等民主政治的全过程，确保了人民当家作主的根本政治制度。"
+            },
+            {
+                question: "如何理解'总体国家安全观'？",
+                answer: "总体国家安全观是习近平总书记提出的重要战略思想，强调要坚持统筹发展和安全，以人民安全为宗旨，以政治安全为根本，以经济安全为基础，以军事、科技、文化、社会安全为保障，以促进国际安全为依托，维护各领域国家安全。"
+            },
+            {
+                question: "如何理解'人类命运共同体'理念？",
+                answer: "人类命运共同体理念主张各国人民要同舟共济、权责共担，促进贸易和投资自由化便利化，推动经济全球化朝着更加开放、包容、普惠、平衡、共赢的方向发展。这一理念为解决当前全球性挑战提供了中国方案。"
+            },
+            {
+                question: "如何理解'共同富裕'？",
+                answer: "共同富裕是社会主义的本质要求，是中国式现代化的重要特征。它不是平均主义，而是要通过合法合理的制度安排，把'蛋糕'分好，形成橄榄型分配结构，让发展成果更多更公平惠及全体人民，不断提升人民群众的获得感、幸福感、安全感。"
+            }
+        ];
+
+        // 获取随机题目
+        function getRandomQuestion() {
+            const index = Math.floor(Math.random() * questions.length);
+            return questions[index];
+        }
+
+        // 更新随机题目
+        function updateRandomQuestion() {
+            const randomQ = getRandomQuestion();
+            document.getElementById('random-question').textContent = randomQ.question;
+            document.getElementById('random-answer').textContent = randomQ.answer;
+            document.getElementById('random-answer').style.display = 'none';
+        }
+
+        // 切换随机题目答案显示/隐藏
+        function toggleRandomAnswer(element) {
+            const answer = element.querySelector('.answer');
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+            } else {
+                answer.style.display = 'none';
+            }
+        }
+
+        // 页面加载时显示第一个随机题目
+        window.onload = function() {
+            updateRandomQuestion();
+        };
+    </script>
+</body>
+</html>
